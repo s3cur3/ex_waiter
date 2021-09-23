@@ -47,7 +47,6 @@ jobs:
           ${{ runner.os }}-mix-${{ steps.setup-beam.outputs.otp-version }}-
           ${{ runner.os }}-mix-
     - name: Install Dependencies 🔗
-      if: steps.restore-cache.outputs.cache-hit != 'true'
       run: mix deps.get
 
     - name: Build 🔧
